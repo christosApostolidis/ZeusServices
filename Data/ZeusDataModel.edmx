@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DIAGBASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PAT1FILE">
+          <Key>
+            <PropertyRef Name="PATCODE" />
+          </Key>
+          <Property Name="PATCODE" Type="bigint" Nullable="false" />
+          <Property Name="PATLAST" Type="nvarchar" MaxLength="25" />
+          <Property Name="PATFIRST" Type="nvarchar" MaxLength="15" />
+          <Property Name="PATLATIN" Type="nvarchar" MaxLength="30" />
+          <Property Name="PATBIRTH" Type="datetime" />
+          <Property Name="PATSEX" Type="nvarchar" MaxLength="1" />
+          <Property Name="PATPROFF" Type="nvarchar" MaxLength="100" />
+          <Property Name="PATADDR" Type="nvarchar" MaxLength="30" />
+          <Property Name="PATZIP" Type="nvarchar" MaxLength="5" />
+          <Property Name="PATTOWN" Type="nvarchar" MaxLength="50" />
+          <Property Name="PATPHON" Type="nvarchar" MaxLength="35" />
+          <Property Name="PATFAX" Type="int" />
+          <Property Name="PATEMAIL" Type="nvarchar" MaxLength="40" />
+          <Property Name="PATAFM" Type="nvarchar" MaxLength="10" />
+          <Property Name="PATADT" Type="nvarchar" MaxLength="10" />
+          <Property Name="PATCIGAR" Type="bit" />
+          <Property Name="CIGARNUM" Type="nvarchar" MaxLength="20" />
+          <Property Name="PATFKIND" Type="nvarchar" MaxLength="15" />
+          <Property Name="PATOPER" Type="text" />
+          <Property Name="PATSICK" Type="text" />
+          <Property Name="PATINHER" Type="text" />
+          <Property Name="PATATHL" Type="text" />
+          <Property Name="PATEKPT" Type="smallint" />
+          <Property Name="SENSENT" Type="bit" />
+          <Property Name="PATALLERGY" Type="text" />
+          <Property Name="PATANAEMIAID" Type="smallint" />
+          <Property Name="PATDISEASEID" Type="smallint" />
+          <Property Name="PATBLTYPE" Type="char" MaxLength="2" />
+          <Property Name="PATRHES" Type="char" MaxLength="10" />
+          <Property Name="NURSED" Type="bit" />
+          <Property Name="XREWSEIS" Type="real" />
+          <Property Name="PISTWSEIS" Type="real" />
+          <Property Name="SENTRANS" Type="bit" />
+          <Property Name="PATKAT" Type="smallint" />
+          <Property Name="SAPPATCODE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DOYCODE" Type="int" />
+          <Property Name="WEB" Type="bit" />
+          <Property Name="WEBDATE" Type="datetime" />
+          <Property Name="WEBPASS" Type="nvarchar" MaxLength="10" />
+          <Property Name="AMKA" Type="nvarchar" MaxLength="20" />
+          <Property Name="TOWNCODE" Type="int" />
+          <Property Name="CTRCODE" Type="nchar" MaxLength="2" />
+          <Property Name="CTRCODE_ST" Type="nchar" MaxLength="2" />
+          <Property Name="PATPASS" Type="nvarchar" MaxLength="10" />
+          <Property Name="PATMOBILE" Type="nvarchar" MaxLength="14" />
+          <Property Name="PROFFCODE" Type="nvarchar" MaxLength="4" />
+          <Property Name="TAMCODE1" Type="int" />
+          <Property Name="TAMCODE2" Type="int" />
+          <Property Name="LASTHISTDT" Type="datetime" />
+          <Property Name="TAMCODE" Type="smallint" />
+        </EntityType>
+        <EntityContainer Name="DIAGBASEModelStoreContainer">
+          <EntitySet Name="PAT1FILE" EntityType="Self.PAT1FILE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DIAGBASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PAT1FILE">
+          <Key>
+            <PropertyRef Name="PATCODE" />
+          </Key>
+          <Property Name="PATCODE" Type="Int64" Nullable="false" />
+          <Property Name="PATLAST" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PATFIRST" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PATLATIN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PATBIRTH" Type="DateTime" Precision="3" />
+          <Property Name="PATSEX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PATPROFF" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PATADDR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PATZIP" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PATTOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PATPHON" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="PATFAX" Type="Int32" />
+          <Property Name="PATEMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="PATAFM" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PATADT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PATCIGAR" Type="Boolean" />
+          <Property Name="CIGARNUM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PATFKIND" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PATOPER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PATSICK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PATINHER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PATATHL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PATEKPT" Type="Int16" />
+          <Property Name="SENSENT" Type="Boolean" />
+          <Property Name="PATALLERGY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PATANAEMIAID" Type="Int16" />
+          <Property Name="PATDISEASEID" Type="Int16" />
+          <Property Name="PATBLTYPE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PATRHES" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NURSED" Type="Boolean" />
+          <Property Name="XREWSEIS" Type="Single" />
+          <Property Name="PISTWSEIS" Type="Single" />
+          <Property Name="SENTRANS" Type="Boolean" />
+          <Property Name="PATKAT" Type="Int16" />
+          <Property Name="SAPPATCODE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOYCODE" Type="Int32" />
+          <Property Name="WEB" Type="Boolean" />
+          <Property Name="WEBDATE" Type="DateTime" Precision="3" />
+          <Property Name="WEBPASS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AMKA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TOWNCODE" Type="Int32" />
+          <Property Name="CTRCODE" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="CTRCODE_ST" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="PATPASS" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PATMOBILE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="PROFFCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="TAMCODE1" Type="Int32" />
+          <Property Name="TAMCODE2" Type="Int32" />
+          <Property Name="LASTHISTDT" Type="DateTime" Precision="3" />
+          <Property Name="TAMCODE" Type="Int16" />
+        </EntityType>
+        <EntityContainer Name="DIAGBASEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PAT1FILE" EntityType="Self.PAT1FILE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DIAGBASEModelStoreContainer" CdmEntityContainer="DIAGBASEEntities">
+          <EntitySetMapping Name="PAT1FILE">
+            <EntityTypeMapping TypeName="DIAGBASEModel.PAT1FILE">
+              <MappingFragment StoreEntitySet="PAT1FILE">
+                <ScalarProperty Name="PATCODE" ColumnName="PATCODE" />
+                <ScalarProperty Name="PATLAST" ColumnName="PATLAST" />
+                <ScalarProperty Name="PATFIRST" ColumnName="PATFIRST" />
+                <ScalarProperty Name="PATLATIN" ColumnName="PATLATIN" />
+                <ScalarProperty Name="PATBIRTH" ColumnName="PATBIRTH" />
+                <ScalarProperty Name="PATSEX" ColumnName="PATSEX" />
+                <ScalarProperty Name="PATPROFF" ColumnName="PATPROFF" />
+                <ScalarProperty Name="PATADDR" ColumnName="PATADDR" />
+                <ScalarProperty Name="PATZIP" ColumnName="PATZIP" />
+                <ScalarProperty Name="PATTOWN" ColumnName="PATTOWN" />
+                <ScalarProperty Name="PATPHON" ColumnName="PATPHON" />
+                <ScalarProperty Name="PATFAX" ColumnName="PATFAX" />
+                <ScalarProperty Name="PATEMAIL" ColumnName="PATEMAIL" />
+                <ScalarProperty Name="PATAFM" ColumnName="PATAFM" />
+                <ScalarProperty Name="PATADT" ColumnName="PATADT" />
+                <ScalarProperty Name="PATCIGAR" ColumnName="PATCIGAR" />
+                <ScalarProperty Name="CIGARNUM" ColumnName="CIGARNUM" />
+                <ScalarProperty Name="PATFKIND" ColumnName="PATFKIND" />
+                <ScalarProperty Name="PATOPER" ColumnName="PATOPER" />
+                <ScalarProperty Name="PATSICK" ColumnName="PATSICK" />
+                <ScalarProperty Name="PATINHER" ColumnName="PATINHER" />
+                <ScalarProperty Name="PATATHL" ColumnName="PATATHL" />
+                <ScalarProperty Name="PATEKPT" ColumnName="PATEKPT" />
+                <ScalarProperty Name="SENSENT" ColumnName="SENSENT" />
+                <ScalarProperty Name="PATALLERGY" ColumnName="PATALLERGY" />
+                <ScalarProperty Name="PATANAEMIAID" ColumnName="PATANAEMIAID" />
+                <ScalarProperty Name="PATDISEASEID" ColumnName="PATDISEASEID" />
+                <ScalarProperty Name="PATBLTYPE" ColumnName="PATBLTYPE" />
+                <ScalarProperty Name="PATRHES" ColumnName="PATRHES" />
+                <ScalarProperty Name="NURSED" ColumnName="NURSED" />
+                <ScalarProperty Name="XREWSEIS" ColumnName="XREWSEIS" />
+                <ScalarProperty Name="PISTWSEIS" ColumnName="PISTWSEIS" />
+                <ScalarProperty Name="SENTRANS" ColumnName="SENTRANS" />
+                <ScalarProperty Name="PATKAT" ColumnName="PATKAT" />
+                <ScalarProperty Name="SAPPATCODE" ColumnName="SAPPATCODE" />
+                <ScalarProperty Name="DOYCODE" ColumnName="DOYCODE" />
+                <ScalarProperty Name="WEB" ColumnName="WEB" />
+                <ScalarProperty Name="WEBDATE" ColumnName="WEBDATE" />
+                <ScalarProperty Name="WEBPASS" ColumnName="WEBPASS" />
+                <ScalarProperty Name="AMKA" ColumnName="AMKA" />
+                <ScalarProperty Name="TOWNCODE" ColumnName="TOWNCODE" />
+                <ScalarProperty Name="CTRCODE" ColumnName="CTRCODE" />
+                <ScalarProperty Name="CTRCODE_ST" ColumnName="CTRCODE_ST" />
+                <ScalarProperty Name="PATPASS" ColumnName="PATPASS" />
+                <ScalarProperty Name="PATMOBILE" ColumnName="PATMOBILE" />
+                <ScalarProperty Name="PROFFCODE" ColumnName="PROFFCODE" />
+                <ScalarProperty Name="TAMCODE1" ColumnName="TAMCODE1" />
+                <ScalarProperty Name="TAMCODE2" ColumnName="TAMCODE2" />
+                <ScalarProperty Name="LASTHISTDT" ColumnName="LASTHISTDT" />
+                <ScalarProperty Name="TAMCODE" ColumnName="TAMCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
